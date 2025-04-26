@@ -1,0 +1,13 @@
+# environment variables
+.env
+
+# cache directories
+__pycache__/
+cmds/__pycache__/
+
+# exe
+*.exe
+
+#song
+*.mp3
+
