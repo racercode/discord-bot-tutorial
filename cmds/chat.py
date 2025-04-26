@@ -9,46 +9,45 @@ class Chat(Cog_Extension):
     @commands.command()
     async def Response(self, ctx, *args):
         if len(args) == 0:
-            await ctx.send("Invalid arguments: Usage: Response <prompt>")
+            await ctx.send("不合法的用法: 用法: Response <prompt>")
             return 
         prompt = ''.join(args)
 
         '''
         TODO
-        Let self.client does a single text generation.
-        Send the LLM response back to Discord.
+        讓 self.client 完成單次的對話。
+        讓 Bot 回傳本次 Gemini 的回應。
         Reference: https://ai.google.dev/gemini-api/docs/text-generation
         '''
 
     @commands.command()
     async def Chat(self, ctx, *args):
         if len(args) == 0:
-            await ctx.send("Invalid arguments: Usage: Chat <prompt>")
+            await ctx.send("不合法的用法: 用法: Chat <prompt>")
             return
         if self.chat:
-            await ctx.send("Please starta new chat first.")
+            await ctx.send("請先初始化對話")
             return
         
         prompt = ''.join(args)
 
         '''
         TODO
-        Let self.chat do multi-turn conversation.
-        Send the LLM response back to Discord.
+        讓 self.client 完成來回多次的對話。( 一次 Chat 代表多次對話的其中一次對話 )
+        讓 Bot 回傳本次 Gemini 的回應。
         Reference: https://ai.google.dev/gemini-api/docs/text-generation
         '''
 
     @commands.command()
     async def NewChat(self, ctx, *args):
         if len(args) == 0:
-            await ctx.send("Invalid arguments: Usage: NewChat <system_instruction>")
+            await ctx.send("不合法的用法: 用法: NewChat <system_instruction>")
             return
         system_instruction = ''.join(args)
 
         '''
         TODO
-        Start a new multi-turn conversation with custom system_instruction
-        Send the LLM response back to Discord.
+        開始一個多次的對話，並設定 system_instruction 提供 Gemini 背景知識。
         Reference: https://ai.google.dev/gemini-api/docs/text-generation
         '''
 

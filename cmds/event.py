@@ -11,8 +11,8 @@ class Event(Cog_Extension):
         await g_channel.send(f"歡迎{member}加入!")
 
     '''
-    TODO (optional)
-    Add other events such as on_message, on_command_error
+    TODO (自由新增)
+    可以新增其他 event， 如 on_message, on_command_error
     '''
     
 async def setup(bot):

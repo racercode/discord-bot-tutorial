@@ -12,13 +12,13 @@ class Music(Cog_Extension):
             if song_exist:
                 os.remove("song.mp3")
         except PermissionError:
-            await ctx.send("Wait for the current playing music to end or use the 'stop' command")
+            await ctx.send("請等待目前歌曲結束 ，或者使用 'stop' 指令")
             return
         
         '''
         TODO (optional)
-        Allow users to seach for song by name
-        (Try adding a web crwaler or exploring the options of yt-dlp)
+        讓使用者能夠查詢歌曲
+        (可以使用爬蟲，或者參考 yt-dlp 的更多功能)
         Reference : https://www.mankier.com/1/yt-dlp
         '''
 
@@ -38,7 +38,7 @@ class Music(Cog_Extension):
 
     '''
         TODO (optional)
-        Add other features such as queue, vote, etc.
+        新增其他功能，如歌曲佇列、投票等等
     '''
     
     @commands.command()
@@ -47,7 +47,7 @@ class Music(Cog_Extension):
         try:
                 await voice.disconnect()
         except:
-            await ctx.send("The bot is not connected to a voice channel.")
+            await ctx.send("機器人沒有連接到語音頻道")
 
 
     @commands.command()
@@ -57,9 +57,9 @@ class Music(Cog_Extension):
             if voice.is_playing():
                 voice.pause()
             else:
-                await ctx.send("Currently no audio is playing.")
+                await ctx.send("目前沒有歌曲播放")
         except:
-            await ctx.send("Bot is not connected to a voice channel.")
+            await ctx.send("機器人沒有連接到語音頻道")
 
 
     @commands.command()
@@ -69,9 +69,9 @@ class Music(Cog_Extension):
             if voice.is_paused():
                 voice.resume()
             else:
-                await ctx.send("The audio is not paused.")
+                await ctx.send("目前歌曲正在播放")
         except:
-            await ctx.send("Bot is not connected to a voice channel.")
+            await ctx.send("機器人沒有連接到語音頻道")
 
     @commands.command()
     async def stop(self,ctx):
@@ -79,7 +79,7 @@ class Music(Cog_Extension):
         try:
             voice.stop()
         except:
-            await ctx.send("Bot is not connected to a voice channel.")
+            await ctx.send("機器人沒有連接到語音頻道")
     
 async def setup(bot):
     await bot.add_cog(Music(bot))

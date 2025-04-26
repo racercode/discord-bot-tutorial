@@ -9,7 +9,7 @@ class Feature1(Cog_Extension):
     
     '''
     TODO
-    Add the necessary bot commands of your custom feature.
+    新增你的自訂功能。
     '''
 
 async def setup(bot):
