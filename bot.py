@@ -4,7 +4,7 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()
-bot = commands.Bot(command_prefix = "$", intents = discord.Intents.all())
+bot = commands.Bot(command_prefix="$", intents=discord.Intents.all())
 
 @bot.event
 async def on_ready():

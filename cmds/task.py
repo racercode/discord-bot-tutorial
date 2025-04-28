@@ -37,7 +37,7 @@ class Scheduler(Cog_Extension):
             await ctx.send("不合法的用法: 用法: RemoveTodoList <事項名稱>")
             return
         
-        task_name = args[0]
+        name = args[0]
 
         '''
         TODO
@@ -53,10 +53,6 @@ class Scheduler(Cog_Extension):
 
     @commands.command()
     async def ShowTodoList(self, ctx):
-        if len(self.TodoList) == 0:
-            await ctx.send("TodoList 是空的.")
-            return
-
         '''
         TODO
         列印所有事項。

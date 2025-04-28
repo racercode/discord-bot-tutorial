@@ -11,7 +11,7 @@ class Event(Cog_Extension):
         await g_channel.send(f"歡迎{member}加入!")
 
     '''
-    TODO (自由新增)
+    TODO (optional)
     可以新增其他 event， 如 on_message, on_command_error
     '''
     

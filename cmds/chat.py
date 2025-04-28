@@ -51,6 +51,11 @@ class Chat(Cog_Extension):
         Reference: https://ai.google.dev/gemini-api/docs/text-generation
         '''
 
+    '''
+    TODO (optional)
+    探索更多 gemini 的功能，如網頁查詢、程式執行等等
+    '''
+
     def __init__(self, *args):
         super().__init__(*args)
         self.client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
