@@ -7,3 +7,5 @@ cmds/__pycache__/
 
 # exe
 *.exe
+
+.claude/

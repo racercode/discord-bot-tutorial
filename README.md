@@ -12,7 +12,7 @@
 2. **設定環境變數**
    ```bash
    cp .env.example .env
-   # 在 .env 中填入 TOKEN 與 GEMINI_API_KEY
+   # 在 .env 中填入 TOKEN 與 GOOGLE_API_KEY
    ```
 
 3. **啟動 Bot**
